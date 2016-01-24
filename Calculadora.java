@@ -45,18 +45,18 @@ public class Calculadora
         else if(val1 == val2){sol = val1;}
         else{
             if(val1 > val2){
-                 int aux = 0;  aux = val1;     val1 = val2;    val2 = aux;
+                int aux = 0;  aux = val1;     val1 = val2;    val2 = aux;
             }
-           
+
             int cont = val1;
             while(cont <= val2){
                 sol = sol +cont;
                 cont++;
             }
         }
-         return sol;
+        return sol;
     }
-    
+
     /**
      *  devuelve verdadero si el parámetro n es primo o falso en caso contrario. 
      */
@@ -73,10 +73,31 @@ public class Calculadora
             cont ++;
         }
         return esPrimo;
-        
-    } 
-   
-}
 
+    } 
+
+    /**
+     * método para realizar multiplicaciones entre nº enteros positivos. solo se pueden emplear las operaciones matemáticas
+     * suma y resta, no estando permitido usar ninguna otra operación matemática
+     */
+    public int multiplicacion(int num1, int num2){
+        int cont = 1;
+        int acum = 0;
+
+        if(num1 < 0 || num2 < 0 ){
+            System.out.println("");
+            System.out.println("Error, un valor es negativo." );
+            acum = -1;
+        }
+        else{
+            while(cont <= num2){
+                acum = acum + num1;
+                cont ++;
+            }
+        }
+        return acum;
+    }
+
+}
 
 
