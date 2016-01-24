@@ -56,6 +56,25 @@ public class Calculadora
         }
          return sol;
     }
+    
+    /**
+     *  devuelve verdadero si el parámetro n es primo o falso en caso contrario. 
+     */
+    public boolean isPrime(int n){
+        boolean esPrimo = true;
+        if(n < 1 ){
+            System.out.println("");
+            System.out.println("Error ." );
+            esPrimo = false;
+        }
+        int cont = 2;
+        while(n % cont == 0 && esPrimo){
+            esPrimo = false;
+            cont ++;
+        }
+        return esPrimo;
+        
+    } 
    
 }
 
