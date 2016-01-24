@@ -97,7 +97,45 @@ public class Calculadora
         }
         return acum;
     }
+    
+    /**
+     * para realizar divisiones entre enteros positivos. solo se pueden emplear las operaciones matemáticas
+     * suma y resta, no estando permitido usar ninguna otra operación matemática
+     */
+    public int dividir(int num1, int num2){
+        int sol = 1;
+        if(num1 < 0 || num2 < 0){
+            System.out.println("");
+            System.out.println("Error, un valor es negativo." );
+            sol = -1;
+        }
+        else{
+            int  acum = num1;
+            while( acum - num2 != 0){
+                acum = acum - num2;
+                sol ++;
+              
+            }
+        }
+        return sol;
+    }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
